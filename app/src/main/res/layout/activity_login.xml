@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/background"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/label_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/nombreUsuario"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_usuario"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/label_clave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/contraseña"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_contraseña"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/cardview_dark_background" />
+
+    <Button
+        android:id="@+id/button_iniciar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorButton"
+        android:onClick="iniciarSesion"
+        android:text="@string/btn_iniciar"
+        android:textColor="@color/design_default_color_background" />
+
+    <TextView
+        android:id="@+id/label_recuperar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:onClick="recuperarClave"
+        android:text="@string/olvidoContraseña"
+        android:textColor="@color/colorFont" />
+
+    <TextView
+        android:id="@+id/label_crear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="crearCuenta"
+        android:text="@string/crearCuenta"
+        android:textColor="@color/colorFont" />
+
+</LinearLayout>

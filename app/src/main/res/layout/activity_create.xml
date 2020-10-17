@@ -1,9 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="top"
+    android:orientation="vertical"
     tools:context=".CreateActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/label_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/nombreUsuario"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_usuario"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/label_correo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/correo"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_correo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/label_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/numeroTelefono"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_telefono"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/label_contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/contraseña"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_contraseña"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/cardview_dark_background" />
+
+    <TextView
+        android:id="@+id/label_conf_contraseña"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/contraseñaNueva"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_conf_contarseña"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="@color/cardview_dark_background" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/terminos"
+        android:textColor="@color/colorFont" />
+
+    <Button
+        android:id="@+id/button_crear"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorButton"
+        android:onClick="crearCuenta"
+        android:text="@string/crear"
+        android:textColor="@color/design_default_color_background" />
+</LinearLayout>

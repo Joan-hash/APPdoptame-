@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">APPdoptame</string>
+    <string name="title_activity_splash">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="logo">logo</string>
+    <string name="nombreUsuario">Nombre de usuario</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="btn_iniciar">Iniciar Sesión</string>
+    <string name="olvidoContraseña">¿Haz olvidado tu contraseña?</string>
+    <string name="crearCuenta">¿No tienes una cuenta?</string>
+    <string name="intruccionRecuperar">Ingresa tu correo para recuperar la contraseña</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="instruccionCodigo">Ingresa el código que llegó a tu correo</string>
+    <string name="btn_Recuperar">Recuperar</string>
+    <string name="instruccionCambiar">Ingresa una contraseña nueva</string>
+    <string name="contraseñaNueva">Contraseña nueva</string>
+    <string name="confContraseñaNueva">Confirmar contraseña nueva</string>
+    <string name="btn_Cambiar">Cambiar</string>
+    <string name="correo">Correo electrónico</string>
+    <string name="numeroTelefono">Número telefónico</string>
+    <string name="terminos"> Acepto términos y condiciones</string>
+    <string name="crear">Crear</string>
 </resources>

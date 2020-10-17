@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/code"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="top"
+    android:orientation="vertical"
     tools:context=".CodeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/label_instruccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:text="@string/instruccionCodigo"
+        android:textColor="@color/colorFont" />
+
+    <EditText
+        android:id="@+id/input_codigo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="120dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/cardview_dark_background" />
+
+    <Button
+        android:id="@+id/button_recuperar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorButton"
+        android:gravity="center"
+        android:onClick="codigo"
+        android:text="@string/btn_Recuperar"
+        android:textColor="@color/design_default_color_background" />
+</LinearLayout>
