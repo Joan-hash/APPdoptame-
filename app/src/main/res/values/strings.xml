@@ -21,4 +21,17 @@
     <string name="numeroTelefono">Número telefónico</string>
     <string name="terminos"> Acepto términos y condiciones</string>
     <string name="crear">Crear</string>
+    <string name="principal">Principal</string>
+    <string name="mensajes">Mis mensajes</string>
+    <string name="consejos">Consejos</string>
+    <string name="agregar">Agregar publicación</string>
+    <string name="perfil">Mi perfil</string>
+    <string name="opciones">Opciones</string>
+    <string name="configuracion">Configuración</string>
+    <string name="terminos2">Términos y condiciones</string>
+    <string name="localizacion">Localización</string>
+    <string name="cerrar">Cerrar sesión</string>
+    <string name="imagenPerfil">Imagen perfil</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="miNombre">Joan</string>
 </resources>

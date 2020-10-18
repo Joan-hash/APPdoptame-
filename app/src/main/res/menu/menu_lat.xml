@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/op_principal"
+        android:title="@string/principal" />
+    <item
+        android:id="@+id/op_mensajes"
+        android:title="@string/mensajes" />
+    <item
+        android:id="@+id/op_consejos"
+        android:title="@string/consejos" />
+    <item
+        android:id="@+id/op_agregar"
+        android:title="@string/agregar" />
+    <item
+        android:id="@+id/op_perfil"
+        android:title="@string/perfil"></item>
+    <item
+        android:id="@+id/op_opciones"
+        android:title="@string/opciones">
+        <menu>
+            <item
+                android:id="@+id/op_configuracion"
+                android:title="@string/configuracion" />
+            <item
+                android:id="@+id/op_terminos"
+                android:title="@string/terminos2" />
+            <item
+                android:id="@+id/op_localizacion"
+                android:title="@string/localizacion" />
+            <item
+                android:id="@+id/op_cerrar"
+                android:title="@string/cerrar" />
+        </menu>
+    </item>
+</menu>
