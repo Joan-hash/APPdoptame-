@@ -34,4 +34,6 @@
     <string name="imagenPerfil">Imagen perfil</string>
     <string name="bienvenido">Bienvenido</string>
     <string name="miNombre">Joan</string>
+    <string name="navigation_drawer_open">drawer_abierto</string>
+    <string name="navigation_drawer_close">drawer_cerrado</string>
 </resources>

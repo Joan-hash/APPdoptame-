@@ -1,7 +1,10 @@
 package com.example.appdoptame;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,7 +14,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
+    ActionBarDrawerToggle toggle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +69,30 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        //recuperar el toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        //asignar el toolbar a esta activity
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main);
+        //mostrar el actionbar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //habilitar toggle
+        getSupportActionBar().setHomeButtonEnabled(true);
+        toggle = new ActionBarDrawerToggle(
+                this,
+                drawer,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close
+        );
+        drawer.setDrawerListener(toggle);
+        toggle.syncState();
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (toggle.onOptionsItemSelected(item)){
+            return true;
+        }
+        return false;
+    }
 }
