@@ -2,18 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/op_principal"
+        android:icon="@drawable/ic_home"
         android:title="@string/principal" />
     <item
         android:id="@+id/op_mensajes"
+        android:icon="@drawable/ic_message"
         android:title="@string/mensajes" />
     <item
         android:id="@+id/op_consejos"
+        android:icon="@drawable/ic_tips"
         android:title="@string/consejos" />
     <item
         android:id="@+id/op_agregar"
+        android:icon="@drawable/ic_add"
         android:title="@string/agregar" />
     <item
         android:id="@+id/op_perfil"
+        android:icon="@drawable/ic_profile"
         android:title="@string/perfil"></item>
     <item
         android:id="@+id/op_opciones"
@@ -21,15 +26,19 @@
         <menu>
             <item
                 android:id="@+id/op_configuracion"
+                android:icon="@drawable/ic_settings"
                 android:title="@string/configuracion" />
             <item
                 android:id="@+id/op_terminos"
+                android:icon="@drawable/ic_terms"
                 android:title="@string/terminos2" />
             <item
                 android:id="@+id/op_localizacion"
+                android:icon="@drawable/ic_location"
                 android:title="@string/localizacion" />
             <item
                 android:id="@+id/op_cerrar"
+                android:icon="@drawable/ic_logout"
                 android:title="@string/cerrar" />
         </menu>
     </item>

@@ -26,7 +26,10 @@ public class MainActivity extends AppCompatActivity {
             TextView mensaje = (TextView) findViewById(R.id.label_saludo);
             mensaje.setText(usuario + " ha conectado y pasado información de dos activitys");
         }
+        menuLateral();
+    }
 
+    public void menuLateral(){
         //agregar funcionalidades a los items del menu lateral
         NavigationView nav = (NavigationView) findViewById(R.id.nav);
         nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -87,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (toggle.onOptionsItemSelected(item)){
