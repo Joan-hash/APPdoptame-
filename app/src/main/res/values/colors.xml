@@ -7,4 +7,5 @@
     <color name="colorButton">#FF6C4C</color>
     <color name="colorFont">#641E16</color>
     <color name="black_overlay">#66000000</color>
+    <color name="background2">#f5f5f5</color>
 </resources>

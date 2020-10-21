@@ -36,4 +36,6 @@
     <string name="miNombre">Joan</string>
     <string name="navigation_drawer_open">drawer_abierto</string>
     <string name="navigation_drawer_close">drawer_cerrado</string>
+    <string name="desripcion">Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba.</string>
+    <string name="pet">Pet</string>
 </resources>
