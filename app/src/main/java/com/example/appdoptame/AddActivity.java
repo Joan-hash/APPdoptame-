@@ -9,36 +9,18 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.ArrayList;
-
-import clases.Post;
-
-public class MainActivity extends AppCompatActivity {
+public class AddActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
-    ArrayList<Post> posts;
-    ListView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        cargarDatos();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add);
 
         menuLateral();
-        list = (ListView) findViewById(R.id.posts_list);
-        list.setAdapter(new Adapter(this, posts));
-    }
-
-    private void cargarDatos() {
-        posts = new ArrayList<>();
-        posts.add(new Post(R.drawable.img_pet1,"Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba."));
-        posts.add(new Post(R.drawable.img_publicidad,"Publicidad. Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad PublicidadPublicidad Publicidad Publicidad Publicidad "));
-        posts.add(new Post(R.drawable.img_pet2,"Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba."));
     }
 
     public void menuLateral(){
@@ -87,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(i);
                         break;
                     default:
-                        Toast.makeText(MainActivity.this, "La opción ingresada es incorrecta", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddActivity.this, "La opción ingresada es incorrecta", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 return true;
