@@ -38,4 +38,30 @@
     <string name="navigation_drawer_close">drawer_cerrado</string>
     <string name="desripcion">Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba. Descripción de prueba.</string>
     <string name="pet">Pet</string>
+    <string name="usuario">Nombre de susuario</string>
+    <string name="user">user</string>
+    <string name="titulo">Título</string>
+    <string name="contenidoTip">Contenido del tip</string>
+    <string name="imagenTip">Imagen tip</string>
+    <string name="biografia">Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía. Biografía.</string>
+    <string name="terms">Términos y condiciones de uso de la aplicación,El documento denominado Términos y Condiciones Generales de Uso de una determinada página o sitio web es aquel que contiene las normas que regulan la interacción de las personas que acceden a ella (usuarias) con el contenido que la misma página pone a disposición, con los productos y/o servicios ofrecidos en ella, y con las personas responsables del sitio.
+    Los Términos y Condiciones de Uso constituyen un documento que se ha vuelto cada vez más habitual y necesario para cualquier persona que sea propietaria de un Sitio Web, o bien que utilice algún servicio o host proporcionado por un proveedor (como las plataformas de blogging, microblogging y algunas redes sociales).Aunque en Chile no existe una regulación extensiva en la materia, este documento se ha elaborado teniendo en consideración la incipiente legislación aplicable y las recomendaciones realizadas por organismos públicos y no gubernamentales.
+    Es por lo anterior que este modelo de Términos y Condiciones contiene una lista extensa de menciones que se consideran importantes para el correcto funcionamiento de todo sitio web, generando la confianza que incentive en los usuarios la interacción con la página y con los productos y servicios ofrecidos en ella.</string>
+    <string name="nombreMascota">Nombre de la mascota</string>
+    <string name="tipoMascota">¿Qué tipo de mascota es?</string>
+    <string name="sexoMascota">¿Qué sexo es la mascota?</string>
+    <string name="esterilizacion">¿Está esterilizad@?</string>
+    <string name="vacunas">¿Está vacunad@?</string>
+    <string name="descripcion">Descripción de las mascota</string>
+    <string name="hembra">Hembra</string>
+    <string name="mecho">Macho</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="perro">Perro</string>
+    <string name="gato">Gato</string>
+    <string name="publicar">Publicar</string>
+    <string name="modoOscuro">Modo oscuro</string>
+    <string name="silenciar">Silenciar notificaciones</string>
+    <string name="reportarError">Reportar error</string>
+    <string name="informacion">Información</string>
 </resources>

@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         menuLateral();
         list = (ListView) findViewById(R.id.posts_list);
-        list.setAdapter(new Adapter(this, posts));
+        list.setAdapter(new AdapterP(this, posts));
     }
 
     private void cargarDatos() {

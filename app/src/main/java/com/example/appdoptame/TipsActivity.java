@@ -9,19 +9,37 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
+import clases.Tip;
+
 public class TipsActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
+    ArrayList<Tip> tips;
+    ListView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        cargarDatos();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tips);
 
         menuLateral();
+        list = (ListView) findViewById(R.id.tips_list);
+        list.setAdapter(new AdapterT(this, tips));
     }
+
+    private void cargarDatos() {
+        tips = new ArrayList<>();
+        tips.add(new Tip(R.drawable.img_tip1, "Perros y cuarenta", "Tip de prueba. Tip de prueba. Tip de prueba. Tip de prueba. Tip de prueba.Tip de prueba."));
+        tips.add(new Tip(R.drawable.img_tip2, "Rutinas", "Tip de prueba. Tip de prueba. Tip de prueba. Tip de prueba. Tip de prueba.Tip de prueba."));
+        tips.add(new Tip(R.drawable.img_tip3, "La ansiedad", "Tip de prueba. Tip de prueba. Tip de prueba. Tip de prueba. Tip de prueba.Tip de prueba."));
+    }
+
     public void menuLateral(){
         //agregar funcionalidades a los items del menu lateral
         NavigationView nav = (NavigationView) findViewById(R.id.nav);

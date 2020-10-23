@@ -9,18 +9,35 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
+import clases.Post;
+
 public class ProfileActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
+    ArrayList<Post> posts;
+    ListView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        cargarDatos();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
         menuLateral();
+        list = (ListView) findViewById(R.id.user_posts_list);
+        list.setAdapter(new AdapterP(this, posts));
+    }
+
+    private void cargarDatos() {
+        posts = new ArrayList<>();
+
+        posts.add(new Post(R.drawable.img_pet1, "Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba."));
+        posts.add(new Post(R.drawable.img_pet2, "Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba."));
     }
 
     public void menuLateral(){

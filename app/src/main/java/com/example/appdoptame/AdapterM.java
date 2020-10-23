@@ -10,21 +10,21 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import clases.Post;
+import clases.Messages;
 
-public class Adapter extends BaseAdapter {
+public class AdapterM extends BaseAdapter {
     private static LayoutInflater inflater = null;
     Context context;
-    ArrayList<Post> posts;
+    ArrayList<Messages> messages;
 
-    public Adapter (Context context, ArrayList<Post> posts){
+    public AdapterM(Context context, ArrayList<Messages> messages){
         this.context = context;
-        this.posts = posts;
+        this.messages = messages;
         inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
     }
     @Override
     public int getCount() {
-        return posts.size();
+        return messages.size();
     }
 
     @Override
@@ -39,15 +39,15 @@ public class Adapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final View view = inflater.inflate(R.layout.post,null);
+        final View view = inflater.inflate(R.layout.message, null);
         //recuperar views
-        TextView descripcion =  (TextView) view.findViewById(R.id.description);
-        ImageView image = (ImageView) view.findViewById(R.id.pet);
+        TextView descripcion =  (TextView) view.findViewById(R.id.user_name);
+        ImageView image = (ImageView) view.findViewById(R.id.user);
         //recuperar el objeto
-        Post p = posts.get(position);
+        Messages m = messages.get(position);
         //seteamos los valores
-        descripcion.setText(p.getDescripcion());
-        image.setImageResource(p.getId());
+        descripcion.setText(m.getNombreUsuario());
+        image.setImageResource(m.getId());
         return view;
     }
 }

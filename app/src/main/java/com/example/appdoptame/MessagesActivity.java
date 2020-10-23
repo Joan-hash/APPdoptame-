@@ -9,19 +9,37 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
+
+import clases.Messages;
+
 public class MessagesActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
+    ArrayList<Messages> messages;
+    ListView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        cargarDatos();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_messages);
 
         menuLateral();
+        list = (ListView) findViewById(R.id.messages_list);
+        list.setAdapter(new AdapterM(this, messages));
     }
+
+    private void cargarDatos() {
+        messages = new ArrayList<>();
+        messages.add(new Messages(R.drawable.img_user1,"Pablo Marmol"));
+        messages.add(new Messages(R.drawable.img_user2,"María Paz"));
+        messages.add(new Messages(R.drawable.img_user3,"Chili willi"));
+    }
+
     public void menuLateral(){
         //agregar funcionalidades a los items del menu lateral
         NavigationView nav = (NavigationView) findViewById(R.id.nav);
