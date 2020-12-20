@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,26 +21,14 @@ import clases.Post;
 
 public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle toggle;
-    ArrayList<Post> posts;
-    ListView list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        cargarDatos();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         menuLateral();
-        list = (ListView) findViewById(R.id.posts_list);
-        list.setAdapter(new AdapterP(this, posts));
     }
-
-    private void cargarDatos() {
-        posts = new ArrayList<>();
-        posts.add(new Post(R.drawable.img_pet1,"Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba."));
-        posts.add(new Post(R.drawable.img_publicidad,"Publicidad. Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad Publicidad PublicidadPublicidad Publicidad Publicidad Publicidad "));
-        posts.add(new Post(R.drawable.img_pet2,"Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba. Descripcion de prueba."));
-    }
-
     public void menuLateral(){
         //agregar funcionalidades a los items del menu lateral
         NavigationView nav = (NavigationView) findViewById(R.id.nav);
@@ -50,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 switch (id){
                     case R.id.op_principal:
                         //aqui va la intencion para cambiar de activity
-                        Intent a = new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(a);
+                        FragmentManager fa = getSupportFragmentManager();
+                        fa.beginTransaction().replace(R.id.posts_list_frag, new FragListPosts()).commit();
                         break;
                     case R.id.op_mensajes:
-                        Intent b = new Intent(getApplicationContext(), MessagesActivity.class);
-                        startActivity(b);
+                        FragmentManager fb = getSupportFragmentManager();
+                        fb.beginTransaction().replace(R.id.messages_list_frag, new FragListMessages()).commit();
                         break;
                     case R.id.op_consejos:
                         Intent c = new Intent(getApplicationContext(), TipsActivity.class);
