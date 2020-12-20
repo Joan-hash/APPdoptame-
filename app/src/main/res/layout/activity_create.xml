@@ -21,7 +21,7 @@
         android:textColor="@color/colorFont" />
 
     <EditText
-        android:id="@+id/input_usuario"
+        android:id="@+id/input_usuarioC"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -78,7 +78,7 @@
         android:textColor="@color/colorFont" />
 
     <EditText
-        android:id="@+id/input_contraseña"
+        android:id="@+id/input_contraseñaC"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -97,7 +97,7 @@
         android:textColor="@color/colorFont" />
 
     <EditText
-        android:id="@+id/input_conf_contarseña"
+        android:id="@+id/input_conf_contarseñaC"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -105,14 +105,6 @@
         android:ems="10"
         android:inputType="textPassword"
         android:textColor="@color/cardview_dark_background" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/terminos"
-        android:textColor="@color/colorFont" />
 
     <Button
         android:id="@+id/button_crear"
