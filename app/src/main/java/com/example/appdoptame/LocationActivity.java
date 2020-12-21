@@ -1,103 +1,46 @@
 package com.example.appdoptame;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
 
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-public class LocationActivity extends AppCompatActivity {
-    ActionBarDrawerToggle toggle;
+public class LocationActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-
-        menuLateral();
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
-    public void menuLateral(){
-        //agregar funcionalidades a los items del menu lateral
-        NavigationView nav = (NavigationView) findViewById(R.id.nav);
-        nav.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch (id){
-                    case R.id.op_principal:
-                        //aqui va la intencion para cambiar de activity
-                        Intent a = new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(a);
-                        break;
-                    case R.id.op_mensajes:
-                        Intent b = new Intent(getApplicationContext(), MessagesActivity.class);
-                        startActivity(b);
-                        break;
-                    case R.id.op_consejos:
-                        Intent c = new Intent(getApplicationContext(), TipsActivity.class);
-                        startActivity(c);
-                        break;
-                    case R.id.op_agregar:
-                        Intent d = new Intent(getApplicationContext(), AddActivity.class);
-                        startActivity(d);
-                        break;
-                    case R.id.op_perfil:
-                        Intent e = new Intent(getApplicationContext(), ProfileActivity.class);
-                        startActivity(e);
-                        break;
-                    case R.id.op_configuracion:
-                        Intent f = new Intent(getApplicationContext(), SettingsActivity.class);
-                        startActivity(f);
-                        break;
-                    case R.id.op_terminos:
-                        Intent g = new Intent(getApplicationContext(), TermsActivity.class);
-                        startActivity(g);
-                        break;
-                    case R.id.op_localizacion:
-                        Intent h = new Intent(getApplicationContext(), LocationActivity.class);
-                        startActivity(h);
-                        break;
-                    case R.id.op_cerrar:
-                        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-                        startActivity(i);
-                        break;
-                    default:
-                        Toast.makeText(LocationActivity.this, "La opción ingresada es incorrecta", Toast.LENGTH_SHORT).show();
-                        break;
-                }
-                return true;
-            }
-        });
-        //recuperar el toolbar
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        //asignar el toolbar a esta activity
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.main);
-        //mostrar el actionbar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //habilitar toggle
-        getSupportActionBar().setHomeButtonEnabled(true);
-        toggle = new ActionBarDrawerToggle(
-                this,
-                drawer,
-                R.string.navigation_drawer_open,
-                R.string.navigation_drawer_close
-        );
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-    }
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+     * we just add a marker near Sydney, Australia.
+     * If Google Play services is not installed on the device, the user will be prompted to install
+     * it inside the SupportMapFragment. This method will only be triggered once the user has
+     * installed Google Play services and returned to the app.
+     */
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (toggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return false;
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
+
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(-26.2467235, -69.6256141);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Potrerillos Norte"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }

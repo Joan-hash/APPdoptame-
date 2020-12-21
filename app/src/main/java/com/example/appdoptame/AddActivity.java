@@ -37,12 +37,12 @@ public class AddActivity extends AppCompatActivity {
                         startActivity(a);
                         break;
                     case R.id.op_mensajes:
-                        Intent b = new Intent(getApplicationContext(), MessagesActivity.class);
-                        startActivity(b);
+                        //Intent b = new Intent(getApplicationContext(), MessagesActivity.class);
+                        //startActivity(b);
                         break;
                     case R.id.op_consejos:
-                        Intent c = new Intent(getApplicationContext(), TipsActivity.class);
-                        startActivity(c);
+                        //Intent c = new Intent(getApplicationContext(), TipsActivity.class);
+                        //startActivity(c);
                         break;
                     case R.id.op_agregar:
                         Intent d = new Intent(getApplicationContext(), AddActivity.class);

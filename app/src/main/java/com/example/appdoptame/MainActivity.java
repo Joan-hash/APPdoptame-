@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.op_mensajes:
                         FragmentManager fb = getSupportFragmentManager();
-                        fb.beginTransaction().replace(R.id.messages_list_frag, new FragListMessages()).commit();
+                        fb.beginTransaction().replace(R.id.posts_list_frag, new FragListMessages()).commit();
                         break;
                     case R.id.op_consejos:
-                        Intent c = new Intent(getApplicationContext(), TipsActivity.class);
-                        startActivity(c);
+                        FragmentManager fc = getSupportFragmentManager();
+                        fc.beginTransaction().replace(R.id.posts_list_frag, new FragListTips()).commit();
                         break;
                     case R.id.op_agregar:
                         Intent d = new Intent(getApplicationContext(), AddActivity.class);
